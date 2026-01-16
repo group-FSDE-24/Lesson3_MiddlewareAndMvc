@@ -7,7 +7,7 @@ namespace Lesson3_MiddlewareAndMvc.Middlewares.Concretes;
 
 public class MVCMiddleware : IMiddleware
 {
-    public HttpHandler? Next { get ; set ; }
+    public HttpHandler? Next { get; set; }
 
     public void Handler(HttpListenerContext httpListenerContext)
     {
@@ -40,9 +40,5 @@ public class MVCMiddleware : IMiddleware
 
             Next?.Invoke(httpListenerContext);
         }
-
-
-
-        throw new NotImplementedException();
     }
 }
