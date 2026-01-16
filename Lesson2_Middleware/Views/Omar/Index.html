@@ -1,12 +1,161 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>AutoLux - Maşın Satışı</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-namespace Lesson3_MiddlewareAndMvc.Views.Omar
-{
-    class Index
-    {
-    }
-}
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://picsum.photos/1920/1080?car") center/cover no-repeat;
+        }
+
+        /* CAR CARD */
+        .car-card {
+            border: none;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+            .car-card:hover {
+                transform: translateY(-8px);
+            }
+
+        .price {
+            font-weight: bold;
+            color: #dc3545;
+            font-size: 1.1rem;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">AutoLux</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#cars">Maşınlar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why">Niyə biz?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Əlaqə</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold">Xəyalındakı Maşın Buradadır</h1>
+            <p class="lead">Yeni və işlənmiş premium avtomobillər</p>
+            <a href="#cars" class="btn btn-danger btn-lg mt-3">Maşınlara Bax</a>
+        </div>
+    </section>
+
+    <!-- CARS -->
+    <section id="cars" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Populyar Maşınlar</h2>
+                <p>Seçilmiş modellər</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Car Card -->
+                <div class="col-md-4">
+                    <div class="card car-card">
+                        <img src="https://picsum.photos/500/300?car=1" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">BMW X5 2022</h5>
+                            <p class="card-text">3.0 | Avtomat | Benzin</p>
+                            <div class="d-flex justify-content-between">
+                                <span class="price">$58,000</span>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Ətraflı</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card car-card">
+                        <img src="https://picsum.photos/500/300?car=2" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mercedes E-Class</h5>
+                            <p class="card-text">2.0 | Avtomat | Dizel</p>
+                            <div class="d-flex justify-content-between">
+                                <span class="price">$52,000</span>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Ətraflı</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card car-card">
+                        <img src="https://picsum.photos/500/300?car=3" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Audi A6</h5>
+                            <p class="card-text">2.0 | Avtomat | Benzin</p>
+                            <div class="d-flex justify-content-between">
+                                <span class="price">$49,500</span>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Ətraflı</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section id="why" class="py-5 bg-dark text-light">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <h4>✔ Etibarlı</h4>
+                    <p>Yoxlanılmış avtomobillər</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>✔ Kredit İmkanı</h4>
+                    <p>Sərfəli şərtlərlə</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>✔ Zəmanət</h4>
+                    <p>Texniki dəstək</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>Bizimlə Əlaqə</h2>
+            <p>📞 +994 XX XXX XX XX</p>
+            <p>📧 info@autolux.az</p>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white text-center py-3">
+        © 2026 AutoLux
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
